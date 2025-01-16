@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js 출력방법(1)</title>
+    <script>
+      // CTRL + / : 한 줄 주석문
+      /*
+        여러줄
+        주석문
+      */
+      // JS는 단따옴표('')와 쌍따옴표("")를 구분하지 않음 (둘 다 문자열로 인식)
+      // alert("Hello, JS 1");
+      // // prettier-ignore
+      // alert('Hello, JS 2');
+      // alert("Hello, JS 3 - '대한민국'");
+      // alert('Hello, JS 4 - "대한민국"');
+
+      // 연산자 +
+      // 1. 산술 연산자 ex) 10 + 20 = 30
+      // 2. 문자열 연결 연산자 ex) 10 + '20' = '1020'
+      //                           Number + String = String으로 강제 형변환
+      console.log("대한" + "민국"); // 대한민국
+      console.log(10 + 20); // 30
+      console.log(10 + "20"); // 1020
+
+      // 변수: var let
+      // 상수: const
+      let num = 10; // 타입 추정으로 number 타입으로 선언됨
+      console.log("num값은 " + num);
+    </script>
+  </head>
+  <body></body>
+</html>

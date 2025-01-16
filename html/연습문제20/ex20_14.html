@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        margin-bottom: 35px;
+      }
+      textarea {
+        width: 350px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>설문조사</h3>
+    <form>
+      <fieldset>
+        <legend>성별과 나이를 입력하세요.</legend>
+        <label for="gender">성별:</label>
+        <input type="radio" name="gender" value="m" />남자
+        <input type="radio" name="gender" value="w" />여자<br />
+        <label for="age">나이:</label>
+        <input type="text" id="age" />
+      </fieldset>
+
+      <fieldset>
+        <legend>관심 분야를 선택하세요.(1개 이상)</legend>
+        <input type="checkbox" name="favorite" value="contents" />디지털 콘텐츠
+        <input type="checkbox" name="favorite" value="web" />웹 프로그래밍
+        <input type="checkbox" name="favorite" value="db" />데이터베이스
+        <input type="checkbox" name="favorite" value="book" />전자출판
+      </fieldset>
+
+      <fieldset>
+        <legend>다음 문항에 대해 5점 척도로 답하세요.</legend>
+        <label for="score1">본 세미나의 주제는 만족스러운가?</label>
+        1<input type="range" id="score1" min="1" max="5" />5 <br />
+        <label for="score2">본 세미나의 초청 강사는 만족스러운가?</label>
+        1<input type="range" id="score2" min="1" max="5" />5 <br />
+        <label for="score">본 세미나의 강의 시간은 적당한가?</label>
+        1<input type="range" id="score3" min="1" max="5" />5 <br />
+      </fieldset>
+
+      <fieldset>
+        기타 의견 사항 <br />
+        <textarea>의견을 적으세요</textarea>
+      </fieldset>
+
+      <button type="submit">확인</button>
+      <button type="reset">취소</button>
+    </form>
+  </body>
+</html>

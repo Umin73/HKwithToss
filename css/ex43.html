@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>레이아웃 배치를 자유롭게 - display:flex</title>
+    <!-- Flexbox, Flexable Box -->
+    <!-- IE11부터 지원 -->
+    <!-- flex 설명 블로그 -->
+    <!-- https://studiomeal.com/archives/197 -->
+    <style>
+      .container {
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 10px;
+        display: flex;
+        width: 40%;
+      }
+      .box {
+        background-color: green;
+        margin: 5px;
+        padding: 5px 45px;
+      }
+      p {
+        color: white;
+        text-align: center;
+      }
+      .opt1 {
+        /* nowrap : 줄바꿈X */
+        flex-wrap: nowrap;
+      }
+      .opt2 {
+        /* wrap: 컨텐츠가 컨테이너 크기를 넘어갈 시 줄바꿈 */
+        flex-wrap: wrap;
+      }
+      .opt3 {
+        /* wrap: 컨텐츠가 컨테이너 크기를 넘어갈 시 줄바꿈 하되, 아래->위 방향으로 줄바꿈 */
+        flex-wrap: wrap-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container opt1">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt2">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt3">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+  </body>
+</html>

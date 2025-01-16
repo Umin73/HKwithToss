@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콘텐츠 초과 처리 - overflow 속성</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #333;
+        margin: 20px;
+        padding: 15px;
+      }
+      /* overflow:visible - default, 콘텐츠가 짤리지 않고 넘친걸 그대로 보여줌 */
+      .visible {
+        overflow: visible;
+        background-color: lightblue;
+      }
+
+      /* overflow:hidden - 초과된 콘텐츠를 숨김 */
+      .hidden {
+        margin-top: 80px;
+        overflow: hidden;
+        background-color: lavender;
+      }
+
+      /* overflow:scroll - 초과된 콘텐츠를 스크롤하게 함 */
+      .scroll {
+        /* x축, y축 모두 스크롤바 생김 */
+        /* overflow: scroll; */
+        /* y축만 스크롤바 생김 */
+        overflow-y: scroll;
+        background-color: lightcyan;
+      }
+
+      /* overflow:auto - 콘텐츠가 초과될 때만 스크롤바가 생김 */
+      .auto {
+        overflow: auto;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box visible">
+      Visible overflow, 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고
+      닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록
+      동해물과 백두산이 마르고 닳도록
+    </div>
+
+    <div class="box hidden">
+      Visible overflow, 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고
+      닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록
+      동해물과 백두산이 마르고 닳도록
+    </div>
+
+    <div class="box scroll">
+      Visible overflow, 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고
+      닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록
+      동해물과 백두산이 마르고 닳도록
+    </div>
+
+    <div class="box auto">
+      Visible overflow, 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고
+      닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록
+      동해물과 백두산이 마르고 닳도록
+    </div>
+  </body>
+</html>

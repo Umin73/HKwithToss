@@ -1,0 +1,289 @@
+#header {
+  margin: 20px;
+  padding: 20px;
+}
+
+#logo_kakao {
+  display: block;
+  width: 88px;
+  height: 27px;
+  margin: 0 auto;
+  background: #fff url(img/logo_kakao.png) no-repeat 0 0;
+  background-size: 100px 80px;
+  font-size: 19px;
+  line-height: 27px;
+  text-align: center;
+}
+
+#main-content {
+  position: relative;
+  width: 580px;
+  height: 100%;
+  min-height: 480px;
+  margin: 40px auto 30px;
+  padding: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+#login-box {
+  position: relative;
+  border: solid #ccc;
+  border-width: 0 0 2px;
+  margin-bottom: 10px;
+}
+#login-input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0 8px;
+  border: 0;
+  font-size: 18px;
+  line-height: 25px;
+  color: #191919;
+  outline: none;
+  caret-color: #191919;
+  opacity: 1;
+}
+
+#save-login-button {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#save-check {
+  right: 24px;
+  width: auto;
+  top: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+}
+#save-login-msg {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  float: left;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}
+#save-login-img {
+  background: url(img/ico_comm.png) 0 0 no-repeat;
+  background-size: 300px auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  display: inline-block;
+  color: transparent;
+  vertical-align: top;
+}
+#help-icon {
+  background: url(img/ico_comm.png) 0 0 no-repeat;
+  background-size: 300px auto;
+  width: 20px;
+  height: 20px;
+  background-position: -120px -110px;
+  display: inline-block;
+  margin-left: 8px;
+}
+#login-btn {
+  padding-top: 20px;
+  text-align: center;
+}
+#submit-btn,
+#qr-login-button {
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: #fee500;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  height: 45px;
+  border-radius: 4px;
+  border: 0;
+}
+
+#qr-login-button {
+  background-color: #f0f0f0;
+}
+
+#login-line {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+#txt-or {
+  display: inline-block;
+  width: 40px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #828282;
+}
+
+#login-line::before,
+#login-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 30px);
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+#login-line::before {
+  left: 0;
+}
+
+#login-line::after {
+  right: 0;
+}
+
+#user-service {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sign-up-link {
+  font-size: 12px;
+  color: #191919;
+  text-decoration: none;
+}
+
+#service-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#service-list li {
+  position: relative;
+}
+
+#service-list li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+#service-list a {
+  font-size: 12px;
+  color: #191919;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 5px 0 5px;
+}
+#ad-box {
+  width: 440px;
+  margin-top: 58px;
+}
+
+#ad-img {
+  width: 100%;
+  border-radius: 4px;
+}
+#footer-contents {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#lang-select-service {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#select-lang {
+  display: inline-block;
+}
+
+#btn-selected {
+  padding: 6px 8px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #666;
+  letter-spacing: -0.1px;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#select-icon {
+  background: url(img/ico_comm.png) 0 0 no-repeat;
+  background-size: 300px auto;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-position: -1px -110px;
+  display: inline-block;
+  margin-left: 0px;
+}
+
+.group-service {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.link-service {
+  padding: 6px 8px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #666;
+  position: relative;
+}
+
+.link-service::before {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 1px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.14);
+  transform: translateY(-50%);
+  content: "";
+}
+
+#copyright {
+  display: block;
+  padding: 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  margin-bottom: 40px;
+}

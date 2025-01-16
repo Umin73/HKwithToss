@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수와 상수</title>
+    <!-- 변수: 메모리 공간(주소)에 이름을 붙여 놓은 것 -->
+    <!-- 상수: 변수로서 한 번 값이 지정되면 변경 불가 -->
+    <!--        PI 와 같은 고정값에 사용 -->
+    <!-- var: 변수, 재선언 가능, 타입 변경 가능 -->
+    <!-- let: 변수, 최근에 추가됨 -->
+    <!-- const: 상수 -->
+
+    <script>
+      // = 등호 연산자: 오른쪽에 있는 값을 왼쪽에 덮어씀
+      var num = 10; // 리터럴: 하드 코딩된 데이터
+      //                       리터럴 값을 확인하고 타입을 결정
+      document.write(num + "<br />");
+      document.write(typeof num + "<br />");
+
+      var num = "hello js!";
+      document.write(num + "<br />");
+      document.write(typeof num + "<br />");
+
+      let myNum = 10;
+      document.write(myNum + "<br />");
+      document.write(typeof myNum + "<br />");
+
+      // let은 같은 변수명으로 재선언 할 수 없음
+      // let myNum = "hello js!!";
+
+      // 상수 선언(대문자로 선언)
+      const PI = 3.14;
+      // 상수의 값 변경을 시도해서 에러 발생
+      // PI = 3.141592;
+    </script>
+  </head>
+  <body></body>
+</html>

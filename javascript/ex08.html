@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 - 테이블 출력하기</title>
+    <script>
+      let stu1 = ["010", "홍길동", "80"];
+      let stu2 = ["020", "신사임당", "70"];
+      let students = [stu1, stu2];
+
+      document.write("<table border='1'>");
+      document.write(
+        "<thead><tr><th>학번</th><th>이름</th><th>국어점수</th></tr></thead>"
+      );
+      document.write("<tbody><tr>");
+      for (var i = 0; i < 3; i++) {
+        document.write("<td>" + stu1[i] + "</td>");
+      }
+      document.write("</tr>");
+      document.write("<tr>");
+      for (var i = 0; i < 3; i++) {
+        document.write("<td>" + stu2[i] + "</td>");
+      }
+      document.write("</tr></tbody>");
+      document.write("</table>");
+    </script>
+  </head>
+  <body></body>
+</html>

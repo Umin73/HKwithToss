@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 출력: img 태그</title>
+
+    <style>
+      #play-button {
+        background-image: url("img/play-button.png");
+        background-repeat: no-repeat;
+        width: 132px;
+        height: 132px;
+        background-color: transparent;
+        border: none;
+      }
+      button {
+        border: none;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- src: 이미지 파일 이름 -->
+    <!-- alt: 이미지가 없을 때 출력되는 대체 문구 -->
+    <img src="img/image1.jpg" width="500px" height="333" alt="카페이미지1" />
+    <img src="img/image2.jpg" width="352px" height="500" alt="카페이미지2" />
+
+    <br />
+    <!-- 이미지 다운로드 링크 걸기 -->
+    <a href="#" download="image1.jpg">image1.jpg 다운로드</a>
+    <br /><br />
+    <button type="button">
+      <img src="img/play-button.png" alt="button" />
+    </button>
+    <button id="play-button"></button>
+
+    <!-- 더미 이미지: 이미지가 준비 안된 상탵에서 배치/구조 잡을 때 사용 -->
+    <img src="http://via.placeholder.com/600x300" />
+    <img src="http://via.placeholder.com/400x200" />
+  </body>
+</html>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>연습문제-영화웹페이지</title>
+    <!-- https://www.megabox.co.kr/movie -->
+
+    <link rel="stylesheet" href="ex60css.css" />
+  </head>
+  <body>
+    <div class="body-wrap">
+      <header id="header">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+        <div class="util-area">
+          <div class="left-link">
+            <a href="#">VIP LOUNGE</a>
+            <a href="#">멤버십</a>
+            <a href="#">고객센터</a>
+          </div>
+          <div class="right-link">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+            <a href="#">빠른예매</a>
+          </div>
+        </div>
+        <div class="link-area">
+          <a
+            href="#"
+            class="header-side-btn"
+            id="site-map-btn"
+            title="사이트맵"
+          ></a>
+          <a href="#" class="header-side-btn" id="search-btn" title="검색"></a>
+          <a
+            href="#"
+            class="header-side-btn"
+            id="timetable-btn"
+            title="상영시간표"
+          ></a>
+          <a
+            href="#"
+            class="header-side-btn"
+            id="my-megabox-btn"
+            title="나의 메가박스"
+          ></a>
+        </div>
+        <nav id="site-nav">
+          <ul class="site-list">
+            <li>
+              <a href="#" class="site-nav-item" id="nav-movie" title="영화"></a>
+            </li>
+            <li>
+              <a href="#" class="site-nav-item" id="nav-booking" title="예매"></a>
+            </li>
+            <li>
+              <a href="#" class="site-nav-item" id="nav-thearer" title="극장"></a>
+            </li>
+            <li>
+              <a href="#" class="site-nav-item" id="nav-event" title="이벤트"></a>
+            </li>
+            <li>
+              <a href="#" class="site-nav-item" id="nav-store" title="스토어"></a>
+            </li>
+            <li>
+              <a href="#" class="site-nav-item" id="nav-benefit" title="혜택"></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="main">
+        <div class="page-util">
+          <div class="inner-wrap">
+            <div class="location">
+              <span>main-home</span>
+              <a href="#">영화</a>
+              <a href="#">전체영화</a>
+            </div>
+          </div>
+        </div>
+        <div id="contents">
+          <div class="inner-wrap">
+            <h2 class="all-movie">전체영화</h2>
+            <div class="tab-list fixed">
+              <ul id="top-menu">
+                <li class="on">
+                  <a href="#">박스오피스</a>
+                </li>
+                <li>
+                  <a href="#">상영예정작</a>
+                </li>
+                <li>
+                  <a href="#">단독</a>
+                </li>
+                <li>
+                  <a href="#">필름소사이어티</a>
+                </li>
+                <li>
+                  <a href="#">클래식소사이어티</a>
+                </li>
+              </ul>
+            </div>
+            <div class="movie-list-util">
+              <div class="topSort" style="display: block;">
+                <div class="movie-sorting"></div>
+                <div class="on-air-condition">
+                  <button type="button" class="btn-on-air">개봉작만</button>
+                </div>
+              </div>
+              <div class="no-result-count"><strong id="total-cnt">88</strong>개의 영화가 검색되었습니다.</div>
+              <div class="movie-search">
+                <input type="text" id="ibxMovieNmSearch" name="ibxMovieNmSearch" placeholder="영화명 검색" class="input-text">
+                <button type="button" class="btn-search-input" id="btnSearch"></button>
+              </div>
+            </div>
+            <div class="movie-list">
+              <ol class="list" id="movieList">
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li tabindex="0" class="no-img">
+                  <div class="movie-list-info">
+                    <p class="rank" >
+                      1
+                    </p>
+                    <img src="https://img.megabox.co.kr/SharedImg/2025/01/06/veoYkRw8THPbrE9FobWUP1BVmEbMOXnp_420.jpg" class="poster lozad">
+                  </div>
+                  <div class="title-area">
+                    <p class="movie-grade age-all"></p>
+                    <p class="title">말할 수 없는 비밀</p>
+                  </div>
+                  <div class="rate-date">
+                    <span class="rate">
+                      예매율 34.8
+                    </span>
+                    <span class="date">개봉일 2025.01.28</span>
+                  </div>
+                  <div class="btn-util">
+                    <button type="button" class="button btn-like">
+                      <i class="iconset ico-heart-toggle-gray intrstType"></i>
+                      <span>656</span>
+                    </button>
+                    <div class="case col-2 movieStat3">
+                      <a href="#" class="button purple bokdBtn">예매</a>
+                      <a href="#" class="button purple img splBtn">
+                        <img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png" >
+                      </a>
+                    </div>
+                    
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div id="more-movie">
+              <div class="btn-more v1" id="addMovieDiv">
+                <button class="btn" id="btnAddMovie">
+                  더보기
+                  <i class="iconset ico-btn-more-arr"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quick-area">
+        <a href class="btn-go-top">top</a>
+      </div>
+      <footer id="footer">
+        <div id="footer-top">
+          <div class="inner-wrap">
+            <ul class="fnb">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">인재채용</a></li>
+              <li><a href="#">사회공헌</a></li>
+              <li><a href="#">제휴/광고/부대산업문의</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li class="privacy"><a href="#">위치기반서비스 이용약관</a></li>
+              <li class="privacy"><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">윤리경영</a></li>
+            </ul>
+            <a href="#" class="btn-looking-theater">
+              <i class="iconset ico-footer-search">극장찾기</i>극장찾기
+            </a>
+          </div>
+        </div>
+        <div id="footer-bottom">
+          <div class="inner-wrap">
+            <div class="ci"></div>
+            <div class="footer-info">
+              <div>
+                <address>서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호</address>
+                <p>ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr</p>
+              </div>
+              <p>대표자명 홍정인, 남용석</p>
+              <p>· 개인정보보호책임자 강병철</p>
+              <p>· 사업자등록번호 211-86-59478</p>
+              <p>· 통신판매업신고번호 2023-서울성동-0177</p>
+              <p class="copy">COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+            </div>
+            <div class="footer-sns">
+              <a href="#"><i class="iconset ico-youtubeN"></i></a>
+              <a href="#"><i class="iconset ico-instagramN"></i></a>
+              <a href="#"><i class="iconset ico-facebookN"></i></a>
+              <a href="#"><i class="iconset ico-twitterN"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+    </div>
+</html>

@@ -1,0 +1,24 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.y2022 {
+  background-color: #e5f6f6;
+}
+
+.number {
+  text-align: right;
+}
+
+caption {
+  caption-side: bottom;
+  text-align: right;
+}

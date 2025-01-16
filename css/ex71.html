@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹 - 미디어쿼리 속성</title>
+    <!-- 반응형 웹이란? -->
+    <!-- : 화면 너비에 따라서 반응하는 동적인 웹 -->
+    <!-- : 화면높이는 스크롤이 있어서 별도 처리 필요X -->
+    <!-- : PC웹, Tablet웹, Mobile웹 3 가지로 구분 -->
+    <!-- 반응형 웹을 만드는 방법 -->
+    <!-- 1. PC웹과 Mobile웹을 별도로 제작 -->
+    <!--     ex) 네이버 pc웹, Mobile(m.naver.com) -->
+    <!-- 2. 반응형으로 해상도에 따라서 동적인 배치 -->
+    <!--     ex) cafe24 디자인센터, 아임웹, 크리에이터링크 -->
+
+    <!-- PC 화면 너비: 가로 960px이상 -->
+    <!-- 태블릿 화면 너비: 가로 768px이상 -->
+    <!-- 모바일 화면 너비: 가로 767px이하 -->
+
+    <style>
+      /* PC 해상도 */
+      @media screen and (min-width: 960px) {
+        body {
+          background-color: plum;
+        }
+      }
+
+      /* table 해상도 */
+      @media screen and (min-width: 768px) and (max-width: 959px) {
+        body {
+          background-color: skyblue;
+        }
+      }
+
+      /* mobile 해상도 */
+      /* 가로로 화면을 돌렸을 때 */
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        body {
+          background-color: lavender;
+        }
+      }
+      /* 세로로 화면을 돌렸을 때 */
+      @media screen and (max-width: 767px) and (orientation: landscape) {
+        body {
+          background-color: lemonchiffon;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>제목태그 h1</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis,
+      cupiditate exercitationem rem, voluptatem assumenda tenetur soluta
+      blanditiis non et natus vel, rerum eos doloribus maiores perspiciatis ex
+      dolore suscipit impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis,
+      cupiditate exercitationem rem, voluptatem assumenda tenetur soluta
+      blanditiis non et natus vel, rerum eos doloribus maiores perspiciatis ex
+      dolore suscipit impedit!
+    </p>
+  </body>
+</html>

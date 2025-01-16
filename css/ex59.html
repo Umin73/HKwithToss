@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다음 로그인화면</title>
+    <link rel="stylesheet" href="ex59css.css" />
+  </head>
+  <body>
+    <div id="header">
+      <span id="logo_kakao"></span>
+    </div>
+    <div id="main-content">
+      <form>
+        <div id="login-box">
+          <input
+            type="text"
+            id="login-input"
+            name="loginId"
+            placeholder="카카오메일 아이디, 이메일, 전화번호"
+          />
+        </div>
+        <div id="login-box">
+          <input
+            type="password"
+            id="login-input"
+            name="loginPw"
+            placeholder="비밀번호"
+          />
+        </div>
+        <div id="save-login-button">
+          <span
+            ><input type="checkbox" id="save-check" value="false" />
+            <label id="save-login-msg"
+              ><span id="save-login-img"></span>간편 로그인 정보 저장</label
+            ></span
+          >
+          <span id="help-icon"></span>
+        </div>
+        <div id="login-btn">
+          <button type="submit" id="submit-btn">로그인</button>
+          <span id="login-line">
+            <span id="txt-or">또는</span>
+          </span>
+          <button id="qr-login-button">QR코드 로그인</button>
+        </div>
+      </form>
+      <div id="user-service">
+        <a
+          href="https://accounts.kakao.com/weblogin/create_account/?continue=https%3A%2F%2Fwww.daum.net&lang=ko&showHeader=false#intro"
+          id="sign-up-link"
+        >
+          회원가입
+        </a>
+        <ul id="service-list">
+          <li>
+            <a
+              href="https://accounts.kakao.com/weblogin/find_account?continue=https%3A%2F%2Fwww.daum.net&lang=ko&showHeader=false"
+              id="user-service-item"
+              >계정 찾기</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://accounts.kakao.com/weblogin/find_password?continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fwww.daum.net&lang=ko&showHeader=false"
+              id="user-service-item"
+              >비밀번호 찾기</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="ad-box">
+        <img src="img/kakaologin_ad.PNG" alt="광고" id="ad-img" />
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footer-contents">
+        <div id="lang-select-service">
+          <div id="select-lang">
+            <button id="btn-selected" role="combobox">
+              한국어<span id="select-icon"></span></button
+            >&nbsp;&nbsp;
+          </div>
+          <div class="group-service">
+            <a
+              href="https://www.kakao.com/policy/terms?lang=ko"
+              class="link-service"
+              >이용약관</a
+            >
+            <a
+              href="https://www.kakao.com/policy/privacy?lang=ko"
+              class="link-service"
+              ><strong>개인정보 처리방침</strong></a
+            >
+            <a href="https://cs.kakao.com/" class="link-service">고객센터</a>
+          </div>
+        </div>
+        <small id="copyright">
+          ©
+          <a href="https://www.kakaocorp.com/page/" id="link-copy"></a>
+          Kakao Corp.</small
+        >
+      </div>
+    </div>
+  </body>
+</html>

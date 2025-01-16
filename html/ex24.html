@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시맨틱 태그</title>
+    <!-- Semantic 의미론적 -->
+    <!-- 웹 페이지의 공통적인 공간 구성 요소를태그의 형식으로 분류한 것 -->
+    <!-- 공통적인 구성요소: 헤더(Header, 푸터(Footer), 메인(섹션), 사이드(Side), 네비게이션바(메뉴바, Nav) -->
+
+    <!-- (시맨틱 태그는 div 태그와 기능적으로는 똑같다) -->
+    <!-- header 태그 : 상단 공간(헤더) -->
+    <!-- nav 태그: 네비게이션(메뉴) 공간 -->
+    <!-- footer 태그: 바닥 공간 -->
+    <!-- main 태그: 주 컨텐츠 공간 (section + aside) -->
+    <!-- section : 주된 컨텐츠-->
+    <!-- aside: 사이트(왼쪽, 오른쪽) 공간 -->
+    <!-- *-----------------* -->
+    <!-- |   Header(Top)   | -->
+    <!-- *-----------------* -->
+    <!-- |        Nav      | -->
+    <!-- *-----------------*      -->
+    <!-- |      |          |      -->
+    <!-- |Aside | Section  | Main -->
+    <!-- |      |          |      -->
+    <!-- *-----------------* -->
+    <!-- |      Footer     | -->
+    <!-- *-----------------* -->
+
+    <style>
+      * {
+        border: 1px solid red;
+      }
+
+      ul,
+      li {
+        display: inline;
+      }
+
+      section {
+        /* display: inline으로 만들고, 오른쪽으로 정렬 */
+        /* float는 가급적 쓰지 않는게 좋고 flex 사용하는게 좋음 */
+        float: right;
+        width: 80%;
+      }
+
+      aside {
+        /* display: inline으로 만들고, 왼쪽으로 정렬 */
+        float: left;
+        width: 18%;
+      }
+      footer {
+        /* float - right */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>헤더 영역</header>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+          tempore quae accusamus praesentium asperiores labore et a voluptatum,
+          quis molestiae quasi suscipit magnam ipsum illo modi cupiditate
+          distinctio assumenda. Aliquam?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+          tempore quae accusamus praesentium asperiores labore et a voluptatum,
+          quis molestiae quasi suscipit magnam ipsum illo modi cupiditate
+          distinctio assumenda. Aliquam?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+          tempore quae accusamus praesentium asperiores labore et a voluptatum,
+          quis molestiae quasi suscipit magnam ipsum illo modi cupiditate
+          distinctio assumenda. Aliquam?
+        </p>
+      </section>
+      <aside>
+        <ul>
+          <li style="display: block"><a href="#">메뉴1</a></li>
+          <li style="display: block"><a href="#">메뉴2</a></li>
+          <li style="display: block"><a href="#">메뉴3</a></li>
+        </ul>
+      </aside>
+    </main>
+    <footer>푸터 영역</footer>
+  </body>
+</html>

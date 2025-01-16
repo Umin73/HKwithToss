@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img태그 이미지 배치하기 - object-fit 속성</title>
+
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+        border: 4px solid midnightblue;
+        margin: 20px;
+      }
+
+      .img1 {
+        /* object-fit:none - 본래의 이미지 사이즈를 유지함 */
+        /*                   컨텐츠 초과시 가운데를 기준으로 보임 */
+        object-fit: none;
+      }
+
+      .img2 {
+        /* object-fit:fill - default, 콘텐츠(이미지)가 컨테이너(img 태그)를 채움 */
+        /*                   컨테이너 해상도(가로세로 비율)가 이미지와 다를 경우, 왜곡 발생 */
+        object-fit: fill;
+      }
+
+      .img3 {
+        /* object-fit:contain - 콘텐츠가 컨테이너에 완전히 들어감 */
+        /*                      컨테이너 해상도 != 이미지 해상도 -> 여백이 발생 */
+        object-fit: contain;
+      }
+
+      .img4 {
+        /* object-fit:cover - 콘텐츠가 컨테이너를 완전히 덮음 */
+        /*                    컨테이너 해상도 != 이미지 해상도 -> 잘림현상 발생 */
+        object-fit: cover;
+      }
+
+      .img5 {
+        /* object-fit:scale-down - 콘텐츠의 크기가 none과 contain 중 더 작은 크기가 되도록 설정 */
+        /* 1. 컨테이너 > 콘텐츠 -> none */
+        /* 2. 컨테이너 < 콘텐츠 -> contain */
+        object-fit: scale-down;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        src="img/winter-8435314_1920.jpg"
+        alt="겨울이미지"
+        class="box img1"
+      />
+
+      <img
+        src="img/winter-8435314_1920.jpg"
+        alt="겨울이미지"
+        class="box img2"
+      />
+
+      <img
+        src="img/winter-8435314_1920.jpg"
+        alt="겨울이미지"
+        class="box img3"
+      />
+
+      <img
+        src="img/winter-8435314_1920.jpg"
+        alt="겨울이미지"
+        class="box img4"
+      />
+
+      <img
+        src="img/winter-8435314_1920.jpg"
+        alt="겨울이미지"
+        class="box img5"
+      />
+    </div>
+  </body>
+</html>

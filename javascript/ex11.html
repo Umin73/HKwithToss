@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연산자</title>
+    <script>
+      // 단항 연산자: 연산의 대상이 1개
+      // 이항 연산자: 산술, 비교, 논리, 대입 (산비논대)
+      // 삼항 연산자
+      // 대입 연산자
+
+      // 연산자의 우선순위: 연산자가 한 줄에 있으면,
+      //                   우선순위에 따라 순차적으로 연산이 됨
+      // 단항 > 이항 > 삼항 > 대입(=)
+
+      // 단항 연산자: ++ -- ! -
+      // 산술 연산자: + - * / %
+      // 비교 : < > <= >= !=
+      // 논리 : || &&
+      // 삼항 : A?B:C
+      // 대입 : = += -= *= /= %=
+
+      // 단항 연산자
+      // 단항 연산자는 가급적 적게 사용(남발 X)
+      let i = 10; // b0000...1010 4바이트 정수
+      // ++ : 자신에게 +1을 더하는 연산자
+      // A++ : A = A+1
+      // A-- : A = A-1
+      i++;
+      document.write("i:" + i + "<br/>");
+
+      // 이항 연산자: 산술
+      //              연산자 우선순위 : 같은 레벨이면 왼쪽에서 오른쪽 순으로 연산 진행
+      document.write(10 + 3 + "<br/>");
+      document.write(10 + 3 - 5 + "<br/>");
+      document.write(10 / 3 + "<br/>"); // 실수 표현
+      document.write(Math.floor(10 / 3) + "<br/>"); // 정수 표현
+      document.write((10 % 3) + "<br/>");
+
+      // 연산자 우선순위: 소괄호를 통해 연산자 우선순위 정할 수 있음
+      document.write(10 + (3 * 6) / 2 - 1);
+    </script>
+  </head>
+  <body></body>
+</html>

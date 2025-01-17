@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문 - switch문</title>
+    <!-- switch문 형식 -->
+    <!-- 
+      switch( number 타입, 문자열, 논리형, ... ) {
+        case ?? :
+          실행문
+          break;
+        case ?? :
+         실행문
+         break;
+        default :
+          실행문
+          break;
+      }
+     -->
+
+    <script>
+      // let num = prompt("숫자를 입력하세요");
+      // switch (num) {
+      //   case 10:
+      //     document.write("10입니다.");
+      //     break;
+      //   case 20:
+      //     document.write("20입니다.");
+      //     break;
+      //   default:
+      //     document.write("그외의 수입니다.");
+      //     break;
+      // }
+
+      // 랜덤수 발생하기
+      // Math.random() 함수: 0.0~0.99999... 까지의 임의수 발생
+      // ex) 1~6까지(주사위)의 랜덤수 발생
+      let dice = Math.floor(Math.random() * 6 + 1);
+      console.log("dice num is " + dice);
+
+      //연습문제 - switch case문
+      //1. 1~10까지의 랜덤한 정수 1개를 발생시키고,
+      // switch문에서 짝수, 홀수 여부를 출력하시오.
+      let randomNum = Math.floor(Math.random() * 10 + 1);
+      switch (randomNum % 2) {
+        case 0:
+          document.write(randomNum + "은 짝수");
+          break;
+        case 1:
+          document.write(randomNum + "은 홀수");
+          break;
+        default:
+          document.write("에러발생");
+          break;
+      }
+      //2. 주사위를 2개 던져서,
+      //  첫번째 주사위는 10의 자리로, 두번째 주사위는 1의 자리로
+      // 만들어서, 출력하시오.
+      // 예) 5, 2 => 52
+      let dice1 = Math.floor(Math.random() * 6 + 1);
+      let dice2 = Math.floor(Math.random() * 6 + 1);
+      let sum = 10 * dice1 + dice2;
+      document.write("<br/>" + sum);
+    </script>
+  </head>
+  <body></body>
+</html>

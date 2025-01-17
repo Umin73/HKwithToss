@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      // for문 사용
+      // 1. 반복변수 i를 1부터 10까지 출력하시오.
+      for (let i = 1; i <= 10; i++) {
+        document.write(i + " ");
+      }
+      document.write("<br/>");
+      // 2. 1부터 10까지의 홀수만 출력하시오.
+      for (let i = 1; i <= 10; i += 2) {
+        document.write(i + " ");
+      }
+      document.write("<br/>");
+      // 3. 1부터 10까지의 3의 배수만 출력하시오. 3,6,9
+      for (let i = 3; i <= 10; i += 3) {
+        document.write(i + " ");
+      }
+      document.write("<br/>");
+      // 4. 1부터 100까지의 합을 출력하시오.
+      let sum = 0;
+      for (let i = 0; i < 100; i++) {
+        sum += i + 1;
+      }
+      document.write(`합은 ${sum} <br/>`);
+      //5. 1부터 6사이의 랜덤수 10개를 출력하시오.
+      let randNum = 0;
+      for (let i = 0; i < 6; i++) {
+        randNum = Math.floor(Math.random() * 6 + 1);
+        document.write(randNum + " ");
+      }
+      document.write("<br/>");
+      //6. 1부터 100사이의 랜덤값을 100개 발생시키고,
+      //  그 중 가장 큰 수(Max)을 출력하시오.
+      let max = Number.MIN_SAFE_INTEGER;
+      for (let i = 0; i < 100; i++) {
+        randNum = Math.floor(Math.random() * 100 + 1);
+        if (randNum > max) max = randNum;
+      }
+      document.write("가장 큰 값은 " + max + "<br/>");
+
+      // 중급
+      //7. 1부터 100까지의 소수의 갯수를 출력하시오.
+      //   소수 : 약수가 1과 자신인 수
+      //   약수 : 나누어 떨어지는 수
+      let decimalCnt = 0;
+      for (let i = 1; i <= 100; i++) {
+        let j = 2;
+        for (; j < i; j++) {
+          if (i % j == 0) break;
+        }
+        if (j == i) decimalCnt++;
+      }
+      document.write("소수의 갯수는 " + decimalCnt + "<Br />");
+
+      //8. 이번주 행운의 로또 숫자 6개를 출력하시오.
+      //   1부터 45까지의 랜덤한 수 6개를 뽑되
+      //   반복허용하지 않음. 재추첨 로직을 넣으시오.
+      let luckNumArr = [0, 0, 0, 0, 0, 0];
+      let picked = -1;
+      for (let i = 0; i < 6; i++) {
+        do {
+          picked = Math.floor(Math.random() * 45 + 1);
+        } while (luckNumArr.includes(picked));
+        luckNumArr[i] = picked;
+      }
+      document.write("로또 번호 : ");
+      for (let i = 0; i < 6; i++) {
+        document.write(luckNumArr[i] + " ");
+      }
+      document.write("<br/>");
+
+      //9. 주사위 2개 10번 던져서, 두 주사위 수를 합산한 다음
+      //   최소수와 최대수를 출력하시오.
+      let minNum = Number.MAX_SAFE_INTEGER;
+      let maxNum = Number.MIN_SAFE_INTEGER;
+      let dice1;
+      let dice2;
+      let diceSum;
+      for (let i = 0; i < 10; i++) {
+        dice1 = Math.floor(Math.random() * 6 + 1);
+        dice2 = Math.floor(Math.random() * 6 + 1);
+        diceSum = dice1 + dice2;
+        if (maxNum < diceSum) maxNum = diceSum;
+        if (minNum > diceSum) minNum = diceSum;
+      }
+      document.write("주사위 합의 최댓값은 " + maxNum + "<br />");
+      document.write("주사위 합의 최소값은 " + minNum + "<br />");
+    </script>
+  </head>
+  <body></body>
+</html>

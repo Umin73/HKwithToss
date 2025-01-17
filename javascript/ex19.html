@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 - break문, continue문</title>
+    <script>
+      // break: 해당 반복문, 조건문을 종료
+      // continue: 해당 회차(Loop)를 건너뜀.
+      for (let i = 0; i < 10; i++) {
+        document.write(`i:${i} <br/>`);
+        if (i >= 5) {
+          break; // i == 5 까지만 출력되고 이후 반복문이 종료됨
+        }
+      }
+      document.write("========<Br/>");
+
+      for (let i = 0; i < 10; i++) {
+        if (i % 2 == 0) {
+          continue; // i가 짝수이면 건너뜀
+        }
+        // 홀수인 경우에만 i를 출력
+        document.write(`i:${i} <br/>`);
+      }
+      document.write("========<Br/>");
+
+      // 이중 반복문에서 break, continue를 사용할 때 레이블을 사용
+      loop1: for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < 10; j++) {
+          document.write(`i:${i}, j:${j} <Br/>`);
+          break loop1;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

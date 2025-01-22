@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제7</title>
+    <script>
+      let calc = (numArr) => {
+        let sum = 0;
+        numArr.forEach(function (num) {
+          sum += parseInt(num);
+        });
+        return sum;
+      };
+
+      let input = prompt("정수 3개를 입력하세요");
+      let numArr = input.split(",");
+
+      console.log(calc(numArr));
+    </script>
+  </head>
+  <body></body>
+</html>

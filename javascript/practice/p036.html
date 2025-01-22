@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제36</title>
+    <script>
+      let input = prompt();
+      let arr = input.split(" ");
+      let scores = new Map();
+      let answer = 0;
+
+      for (score of arr) {
+        if (!scores.has(score)) {
+          scores.set(score, 1);
+        } else {
+          scores.set(score, scores.get(score) + 1);
+        }
+      }
+
+      let scoreArray = [...scores];
+      scoreArray.sort().reverse();
+
+      let scoreDescMap = new Map(scoreArray);
+
+      for(let i=0; i<3; i++) {
+        answer += scoreDescMap.
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

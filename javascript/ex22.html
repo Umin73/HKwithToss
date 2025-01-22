@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열의 함수</title>
+    <script>
+      // 자바스크립트에서 배열은 리스트의 기능을 포함
+      // push() : 배열의 맨 뒤에 요소 추가
+      // unshift() : 배열의 맨 앞에 요소 추가
+      // splice() : 교체(치횐)
+      // delete 연산자: 지우고 empty로 남김
+      // pop() : 배열의 맨 마지막 요소를 꺼냄
+      // shift(): 맨 처음 요소 지움
+      // concat() : 두 배열을 결합(연결)
+      // sort() : 정렬 (오름차순)
+      // reverse(): 역정렬 (내림차순)
+
+      // 배열의 선언
+      let arr0 = [];
+      let arr1 = [10, 20, 30];
+      let arr2 = new Array();
+      let arr3 = new Array(5); // 길이가 5
+      let arr4 = new Array(10, 20, 30);
+      let arr5 = Array.of("11111"); // 길이가 1
+      let arr6 = Array.from("11111"); // 길이가 5
+      console.log(arr5);
+      console.log(arr6);
+
+      arr0.push(10); // 맨 뒤에 추가
+      console.log(arr0);
+
+      arr0.unshift(0); // 맨 앞에 추가
+      console.log(arr0);
+
+      // 지우고 추가(교체)
+      // splice(인덱스, 지우는 개수, 덮어씌우는 값)
+      arr6.splice(2, 2, 100);
+      console.log(arr6);
+
+      // 지우고 empty로 남겨놓음
+      delete arr6[1];
+      console.log(arr6);
+
+      // 맨 마지막 요소 지우기
+      arr6.pop();
+      console.log(arr6);
+
+      // 맨 첫번째 요소 지우기
+      arr6.shift();
+      console.log(arr6);
+
+      // so hunnnnnngry
+
+      // 배열의 결합
+      let arrA = [10, 20, 30];
+      let arrB = [30, 40, 50];
+      let arrC = arrA.concat(arrB);
+      console.log(arrC);
+      let setA = new Set(arrC);
+      console.log(setA);
+
+      // 값 타입 변수 vs 참조 타입 변수
+      // 값 타입은 메모리 공간에 실제값을 가짐
+      // 참조 타입은 메모리 공간에 실제 값의 주소값을 가짐
+
+      // 정렬
+      let arrD = [20, 40, 10, 50, 15];
+      // let orgArray = arrD; // arrD의 주소가 복사된 것
+      let orgArray = [...arrD]; // 원본값을 저장하고 싶으면, 새로운 배열(공간)을 만들어야 함
+      let orgArray2 = Array.from(arrD);
+      let sortedArray = arrD.sort();
+      console.log(sortedArray);
+      console.log(orgArray);
+    </script>
+  </head>
+  <body></body>
+</html>

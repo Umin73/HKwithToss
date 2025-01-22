@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제25</title>
+    <script>
+      let input1 = prompt();
+      let nameArr = input1.split(" ");
+      let input2 = prompt();
+      let scoreArr = input2.split(" ");
+
+      let map = new Map();
+      for (let i = 0; i < nameArr.length; i++) {
+        map.set(nameArr[i], scoreArr[i]);
+      }
+
+      console.log(map);
+    </script>
+  </head>
+  <body></body>
+</html>

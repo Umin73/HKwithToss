@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스</title>
+    <script>
+      // Class는 ES6 버전부터 지원
+      // 그전에는 prototype을 통해서 상속을 지원했는데,
+      //    문법이 복잡해서 잘 사용X
+
+      // js는 간단한 스크립트 언어인데,
+      // 리액트, Node.js를 통해 대용량의 프로그램을 만들기 시작하면서
+      // 클래스에 필요성이 대두되었다
+
+      // 객체지향(클래스 - 객체) : 상속, 생성자 함수 지원, 가상함수(인터페이스)
+      // 클래스 사용 이유
+      // 1. 변수와 함수를 클래싱(모듈화)
+      // 2. 상속, 생성자함수, 가상함수(오버라이드)
+
+      // 클래스 선언
+      class Person {
+        name = "honggildong";
+        walk() {
+          console.log("walk in on water");
+        }
+      }
+      // 클래스 객체 생성
+      let person = new Person();
+      person.walk();
+
+      // 생성자 함수: 객체 생성 시 자동으로 호출되는 함수
+      // 용도: 초기화
+      class Person2 {
+        constructor(name, age) {
+          console.log("constructor 호출됨");
+          // this.name : 멤버변수
+          // name: 매개변수
+          this.name = name;
+          this.age = age;
+        }
+      }
+      let person2 = new Person2("홍길동", 33);
+      console.log(person2.name);
+      console.log(person2.age);
+
+      // get, set 함수
+      // 용도: 일거가거나 설정되는 값을 필터링 하는 기능
+      class Person3 {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        get name() {
+          console.log("name을 읽으면 자동으로 호출됨");
+
+          // _name은 this.name과 같은 의미(get에서만 사용하는 방식)
+          return this._name + "님 어서오세요";
+        }
+        set name(newName) {
+          if (newName) {
+            if (String(newName).length > 5) {
+              console.error("이름이 5글자 이상임.");
+            } else {
+              this._name = newName;
+            }
+          }
+        }
+      }
+      let person3 = new Person3("변사또", 37);
+      console.log(person3.name);
+      let person4 = new Person3("변사또123", 37);
+      console.log(person3.name);
+    </script>
+  </head>
+  <body></body>
+</html>

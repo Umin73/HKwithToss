@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 최신문법</title>
+    <script>
+      // 템플릿 리터럴
+      let str = "javascript";
+      // prettier-ignore
+      console.log("이것은 " + str + " 입니다.");
+      console.log(`이것은 ${str} 입니다.`);
+
+      // 화살표 함수
+      let sum = function (a, b) {
+        return a + b;
+      };
+      // 중괄호 생략
+      let arrowSum = (a, b) => a + b;
+
+      // 모듈 내보내기/가져오기 export/import
+
+      // 클래스 - 상속 : 부모의 자원을 물려받는 것
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        nextYearAge() {
+          return Number(this.age) + 1;
+        }
+      }
+      class introPerson extends Person {
+        constructor(name, age, city) {
+          super(name, age);
+          this.city = city;
+        }
+        introduce() {
+          return `저는 ${this.city}에 살소 있는 ${this.name}입니다.`;
+        }
+        nextYearAge() {
+          // 오버라이딩: 부모 클래스의 함수를 재정의하는 것
+          return Number(this.age) + 2;
+        }
+      }
+      let iPerson = new introPerson("홍길동", 30, "한양");
+      console.log(iPerson.introduce());
+      console.log(iPerson.nextYearAge());
+    </script>
+  </head>
+  <body></body>
+</html>

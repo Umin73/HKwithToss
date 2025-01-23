@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제65</title>
+    <script>
+      let a = [1, 2, 3, 4];
+      let b = ["a", "b", "c", "d"];
+      // let c = new Array(a.length);
+
+      // for (var i = 0; i < c.length; i++) {
+      //   c[i] = new Array(2);
+      //   c[i][0] = a[i];
+      //   c[i][1] = b[i];
+      // }
+
+      let output = "[";
+      for (var i = 0; i < a.length; i++) {
+        output += "[" + a[i] + "," + b[i] + "]";
+        if (i + 1 != a.length) output += ",";
+      }
+      output += "]";
+      console.log(output);
+    </script>
+  </head>
+  <body></body>
+</html>

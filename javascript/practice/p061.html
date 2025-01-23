@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제61</title>
+    <script>
+      let input = prompt();
+      let newStr = "";
+
+      let cnt = 1;
+      let nextIsSame = false;
+      for (let i = 0; i < input.length; i++) {
+        if (input[i] == input[i + 1]) {
+          nextIsSame = true;
+          cnt++;
+          // console.log("next is same");
+        } else {
+          nextIsSame = false;
+
+          newStr += input[i] + String(cnt);
+
+          cnt = 1;
+        }
+      }
+      console.log(newStr);
+    </script>
+  </head>
+  <body></body>
+</html>

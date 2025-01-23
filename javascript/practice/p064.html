@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제64</title>
+    <script>
+      let n = prompt();
+      let count = 0;
+      let temp;
+
+      if (n % 7 == 0) count = n / 7;
+      else {
+        while (n > 0) {
+          temp = n - 7;
+          count++;
+          if (temp % 7 == 0 || temp % 3 == 0) {
+            n -= 7;
+          } else {
+            n -= 3;
+          }
+        }
+      }
+      console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>

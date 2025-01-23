@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제54</title>
+    <script>
+      let input = prompt();
+      let arr = input.split(" ");
+      let flag = true;
+
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (Number(arr[i]) + 1 != Number(arr[i + 1])) {
+          console.log("NO");
+          flag = false;
+          break;
+        }
+      }
+      if (flag) console.log("YES");
+    </script>
+  </head>
+  <body></body>
+</html>

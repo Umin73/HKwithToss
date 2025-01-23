@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제56</title>
+    <script>
+      nationWidth = {
+        korea: 220877,
+        Rusia: 17098242,
+        China: 9596961,
+        France: 543965,
+        Japan: 377915,
+        England: 242900,
+      };
+
+      let min = Number.MAX_SAFE_INTEGER;
+      let minCountry;
+      for (const nation in nationWidth) {
+        if (nation == "korea") continue;
+        else {
+          if (Math.abs(nationWidth[nation] - nationWidth["korea"]) < min) {
+            min = Math.abs(nationWidth[nation] - nationWidth["korea"]);
+            minCountry = nation;
+          }
+        }
+      }
+      console.log(minCountry + " " + min);
+    </script>
+  </head>
+  <body></body>
+</html>

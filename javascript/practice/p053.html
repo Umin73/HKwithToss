@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제53</title>
+    <script>
+      let input = prompt();
+      let idx = 0;
+      for (idx = 0; idx < input.length * 2; idx++) {
+        if (input.includes("()")) {
+          input = input.replace("()", "");
+        }
+        if (input.includes("[]")) {
+          input = input.replace("[]", "");
+        }
+        if (input.includes("{}")) {
+          input = input.replace("{}", "");
+        }
+      }
+      if (input == "") console.log("YES");
+      else console.log("NO");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제59</title>
+    <script>
+      let input = prompt();
+      let restLength = 50 - input.length;
+      let newStr = "";
+
+      let restHalfLength = 0;
+      if (restLength % 2 == 1) {
+        restHalfLength = restLength / 2 - 1;
+      } else {
+        restHalfLength = restLength / 2;
+      }
+
+      for (let i = 0; i < restHalfLength; i++) newStr += "=";
+      newStr += input;
+      for (let i = 0; i < restHalfLength; i++) newStr += "=";
+      console.log(newStr);
+      console.log(newStr.length);
+    </script>
+  </head>
+  <body></body>
+</html>

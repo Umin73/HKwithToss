@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제63</title>
+    <script>
+      let input = prompt();
+      let newStr = "";
+      let spaceIdx = 0;
+
+      while (input.length > 0) {
+        spaceIdx = input.indexOf(" ");
+        newStr += input[0];
+        if (!input.includes(" ") && input.length > 0) input = "";
+        else input = input.substring(spaceIdx + 1);
+      }
+      console.log(newStr);
+    </script>
+  </head>
+  <body></body>
+</html>

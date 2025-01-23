@@ -6,26 +6,25 @@
     <title>문제36</title>
     <script>
       let input = prompt();
-      let arr = input.split(" ");
-      let scores = new Map();
-      let answer = 0;
+      let inputArr = input.split(" ");
 
-      for (score of arr) {
-        if (!scores.has(score)) {
-          scores.set(score, 1);
+      const scores = inputArr.reduce((acc, curr) => {
+        if (acc[curr]) {
+          acc[curr] += 1;
         } else {
-          scores.set(score, scores.get(score) + 1);
+          acc[curr] = 1;
         }
-      }
+        return acc;
+      }, {});
 
-      let scoreArray = [...scores];
-      scoreArray.sort().reverse();
+      const topThree = Object.entries(scores)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map((entry) => entry[1]);
 
-      let scoreDescMap = new Map(scoreArray);
+      let result = topThree[0] + topThree[1] + topThree[2];
 
-      for(let i=0; i<3; i++) {
-        answer += scoreDescMap.
-      }
+      console.log(result);
     </script>
   </head>
   <body></body>

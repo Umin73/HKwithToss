@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제38</title>
+    <script>
+      let limit = prompt("제한 몸무게는?");
+      let friends = prompt("친구들의 수는?");
+      let weights = [];
+
+      for (let i = 0; i < friends; i++) {
+        weights[i] = prompt("몸무게를 입력하세요.");
+      }
+
+      let currWeight = 0;
+      let cnt = 0;
+      for (weight of weights) {
+        currWeight += weight;
+        cnt++;
+        if (currWeight > 50) break;
+      }
+
+      console.log(cnt);
+    </script>
+  </head>
+  <body></body>
+</html>

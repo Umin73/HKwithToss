@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제42</title>
+    <script>
+      let dateArr = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+      function calcDay(month, date) {
+        let getDate = new Date(2020, month - 1, date);
+        return getDate.getDay();
+      }
+      console.log(dateArr[calcDay(5, 24)]);
+    </script>
+  </head>
+  <body></body>
+</html>

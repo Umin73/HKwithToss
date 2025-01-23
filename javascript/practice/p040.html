@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제40</title>
+    <script>
+      var names = ["장미", "수선화", "코스모스"];
+
+      let maxObj = { maxLength: Number.MIN_SAFE_INTEGER, name: "" };
+
+      names.forEach(function (name) {
+        if (name.length > maxObj.maxLength) {
+          maxObj.maxLength = name.length;
+          maxObj.name = name;
+        }
+      });
+
+      console.log("가장 긴 단어는 " + maxObj.name + "입니다.");
+    </script>
+  </head>
+  <body></body>
+</html>

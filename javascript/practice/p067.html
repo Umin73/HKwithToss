@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제67</title>
+    <script>
+      let n = prompt();
+      /*
+      a b c d e
+      ab ac ad ae
+      bc bd be
+      cd ce
+      de
+      안 빠졌을 때 악수의 총 횟수는 1+2+...+(n-1) 10
+
+      한 명 빠졌을 때
+      a b c d
+      ab ac ad
+      bc bd
+      cd
+      1+..+(n-2) 5
+
+
+      */
+      let x = 0;
+      let people = 1;
+      while (x < n) {
+        x += people;
+        people++;
+      }
+
+      let y = 0;
+      for (let i = 0; i < people - 2; i++) {
+        y += i + 1;
+      }
+
+      console.log("[" + (n - y) + ", " + people + "]");
+    </script>
+  </head>
+  <body></body>
+</html>

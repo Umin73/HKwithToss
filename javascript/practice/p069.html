@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제69</title>
+    <script>
+      let n = prompt();
+      let decimalArr = new Array();
+
+      let flag = true;
+      for (let num = 2; num < n; num++) {
+        flag = true;
+        for (let i = 2; i < num - 1; i++) {
+          if (num % i == 0) {
+            flag = false;
+            break;
+          }
+        }
+        if (flag) decimalArr.push(num);
+      }
+      console.log(decimalArr);
+
+      for (let i = 0; i < decimalArr.length; i++) {
+        for (let j = i; j < decimalArr.length; j++) {
+          if (decimalArr[i] + decimalArr[j] == n) {
+            console.log(n + " == " + decimalArr[i] + " + " + decimalArr[j]);
+            break;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

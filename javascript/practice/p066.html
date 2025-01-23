@@ -6,11 +6,31 @@
     <title>문제66</title>
     <script>
       let topArr = ["ABCDEF", "BCAD", "ADEFQRX", "BEDFG", "EFGHZ"];
-      let rule = "ABD";
-      let ruleArr = [...rule];
+      let flag = true;
 
-      for (var i = 0; i < topArr.length; i++) {
-        for (var j = 0; j < topArr[i].length - 1; j++) {}
+      let idxA;
+      let idxB;
+      let idxD;
+
+      for (let top of topArr) {
+        idxA = top.indexOf("A");
+        idxB = top.indexOf("B");
+        idxD = top.indexOf("D");
+
+        if (idxA > idxB && idxA != -1 && idxB != -1) {
+          flag = false;
+        }
+
+        if (idxA > idxD && idxA != -1 && idxD != -1) {
+          flag = false;
+        }
+        if (idxB > idxD && idxB != -1 && idxD != -1) {
+          flag = false;
+        }
+        if (flag) console.log("가능");
+        else console.log("불가능");
+
+        flag = true;
       }
     </script>
   </head>

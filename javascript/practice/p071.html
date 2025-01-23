@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제71</title>
+    <script>
+      const graph = {
+        E: ["D", "A"],
+        F: ["D"],
+        A: ["E", "C", "B"],
+        B: ["A"],
+        C: ["A"],
+        D: ["E", "F"],
+      };
+      const alphabet = ["A", "B", "C", "D", "E", "F"];
+      let visitArr = new Array(6).fill(false);
+      let visited = "";
+      let first = true;
+
+      for (let idx in graph) {
+        if (first) {
+          visited += idx;
+          visitArr.splice(0, 1, true);
+          first = false;
+          console.log(visited);
+        }
+        for (let idx2 in graph[idx]) {
+          let alphaIdx = alphabet.indexOf(graph[idx][idx2]);
+          dfs(alphaIdx);
+        }
+      }
+      console.log(visited);
+
+      function dfs(idx) {
+        if (visitArr[idx]) return;
+        else {
+          visitArr.splice(idx, 1, true);
+          console.log(visited);
+          visited += " " + alphabet[idx];
+          for (let i in graph[idx]) {
+            let alphaIdx = alphabet.indexOf(graph[idx][i]);
+            console.log("alphaIdx: " + alphaIdx);
+            if (!visitArr[alphaIdx]) dfs(alphaIdx);
+          }
+        }
+      }
+
+      console.log(graph);
+    </script>
+  </head>
+  <body></body>
+</html>

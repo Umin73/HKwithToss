@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제68</title>
+    <script>
+      const timetable = ["12:30", "13:20", "14:13"];
+      const curTime = "12:40";
+      const curH = curTime.substring(0, 2);
+      const curM = curTime.substring(3, 5);
+      let answerArr = new Array();
+      let h;
+      let m;
+
+      for (let time of timetable) {
+        h = time.substring(0, 2);
+        m = time.substring(3, 5);
+
+        if (h < curH) answerArr.push("지나갔습니다.");
+        else if (h == curH && m < curM) answerArr.push("지나갔습니다.");
+        else if (h == curH && m > curM) {
+          answerArr.push("00시간 " + (m - curM) + "분");
+        } else if (h > curH) {
+          let x = Number(h) - Number(curH) - 1;
+          let y = Number(m) + 60 - Number(curM);
+          answerStr = "";
+
+          if (x < 10) answerStr += "0" + x + "시간 ";
+          else if (x >= 10) answerStr += x + "시간 ";
+
+          if (y < 10) answerStr += "0" + y + "분";
+          else if (y >= 10) answerStr += y + "분";
+
+          answerArr.push(answerStr);
+        }
+        console.log(answerArr);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

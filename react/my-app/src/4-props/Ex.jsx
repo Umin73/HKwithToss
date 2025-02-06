@@ -108,6 +108,8 @@ function InfoCard(props) {
     </div>
   );
 }
+// 자식 컴포넌트(child component)
+// 자식 요소(child element) : props.children
 export function Props5() {
   return (
     <>

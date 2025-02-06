@@ -75,7 +75,7 @@ export function Props2() {
 //   * 비타민 C
 function ItemDetailList({ name, details }) {
   return (
-    <div>
+    <>
       <li>
         {name}
         <ul>
@@ -84,7 +84,7 @@ function ItemDetailList({ name, details }) {
           ))}
         </ul>
       </li>
-    </div>
+    </>
   );
 }
 export function Props3() {

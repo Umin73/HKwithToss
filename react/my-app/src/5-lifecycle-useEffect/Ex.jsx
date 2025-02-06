@@ -145,7 +145,7 @@ export function LifeCycleFunc5() {
 
   useEffect(() => {
     console.log("컴포넌트가 마운트되었습니다.");
-    CallApi();
+    CallApi(); // 마운트 시에 한번만 호출
   }, []);
 
   return (

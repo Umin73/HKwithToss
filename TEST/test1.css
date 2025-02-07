@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.main-contents {
+  height: 100vh;
+  background-color: #f3f4f6;
+  padding-top: 30px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  padding-left: 30px;
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #e8f3ff;
+}
+
+.contents-title {
+  margin: 30px 30px;
+  margin-top: 0px;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.item-container {
+  display: flex;
+  /* justify-content: center; */
+  margin: 0 30px;
+}
+
+.item-card {
+  background-color: white;
+  max-width: 500px;
+  min-width: 350px;
+  height: 110px;
+  margin: 0 15px;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0px 2px 5px rgba(45, 45, 45, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-card-section1,
+.item-card-section2,
+.item-card-section3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-size: large;
+  font-weight: 600;
+}
+
+.item-price {
+  font-size: large;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.item-info {
+  font-size: 14px;
+  color: rgb(123, 123, 123);
+}
+
+.item-tag {
+  background-color: #e8f3ff;
+  width: 70px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #003c7b;
+  padding: 3px;
+}
+
+.my-cart-btn {
+  background-color: #2563eb;
+  width: 130px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 996px) {
+  .item-container {
+    flex-wrap: wrap;
+  }
+  .item-card {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .item-container {
+    flex-wrap: wrap;
+  }
+  .item-card {
+    margin-bottom: 30px;
+  }
+}

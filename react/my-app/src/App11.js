@@ -1,10 +1,10 @@
 // App5.js
 import React from "react";
 // import InlineStyle, * as E from "./13-style/Style";
-import * as E from "./10-list/Ex";
+import * as E from "./11-form/Form";
 
 function App() {
-  return <E.DynamicPostList />;
+  return <E.UncontrolledForm />;
 }
 
 export default App;

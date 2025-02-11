@@ -111,3 +111,154 @@ export function DynamicList() {
 // 2. useEffect와 fetch: API 호출을 처리합니다.
 // 3. useState: 데이터를 저장합니다.
 // 4. 데이터 로딩 중 상태와 오류 처리도 간단히 포함합니다.
+
+export function PostList() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // API호출
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setPosts(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+
+  return (
+    <div style={{ padding: "10px" }}>
+      <h1>Posts</h1>
+      <ul>
+        {posts.map((post) => (
+          <li
+            key={post.id}
+            style={{ borderBottom: "1px solid #ccc", padding: "10px 0" }}
+          >
+            <p>
+              <strong>{post.title}</strong>
+            </p>
+            <p>{post.body}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+//연습문제5
+//연습문제4에서 가져온 posts에다가
+// 입력 폼을 통해 새로운 post를 동적으로 추가하고 초기에는 10개의 post만 보여주는 리액트 컴포넌트를 작성했습니다.
+// 요구사항
+// 1. 처음에는 API로 가져온 10개의 post만 보여줍니다.
+// 2. 사용자가 입력 폼에 id, User ID, Title, Body를 입력하고 제출하면 새로운 post가 동적으로 추가됩니다.
+
+export function DynamicPostList() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [userId, setUserId] = useState("");
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+
+  useEffect(() => {
+    // API호출
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setPosts(data.slice(0, 10));
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+
+  const handleAddPost = () => {
+    setPosts([
+      ...posts,
+      {
+        userId: userId,
+        id: posts.length + 1,
+        title: newTitle,
+        body: newBody,
+      },
+    ]);
+    setUserId("");
+    setNewTitle("");
+    setNewBody("");
+  };
+
+  return (
+    <div style={{ padding: "10px" }}>
+      <h1>Posts</h1>
+      <input
+        type="text"
+        value={userId}
+        placeholder="user id"
+        onChange={(e) => setUserId(e.target.value)}
+      />
+      <br />
+      <input
+        type="text"
+        value={newTitle}
+        placeholder="title"
+        onChange={(e) => setNewTitle(e.target.value)}
+      />
+      <br />
+      <input
+        type="text"
+        value={newBody}
+        placeholder="body"
+        onChange={(e) => setNewBody(e.target.value)}
+      />
+      <br />
+      <button onClick={handleAddPost}>Add Post</button>
+      <ul>
+        {posts.map((post) => (
+          <li
+            key={post.id}
+            style={{ borderBottom: "1px solid #ccc", padding: "10px 0" }}
+          >
+            <p>
+              <strong>{post.title}</strong>
+            </p>
+            <p>{post.body}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

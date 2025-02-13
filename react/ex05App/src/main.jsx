@@ -3,12 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 // import App from "./App.jsx";
 // import Chip from "./ChipsOrder.jsx";
-import ChoosePlace from "./ChoosePlace.jsx";
+// import ChoosePlace from "./ChoosePlace.jsx";
+import MenuOrder from "./MenuOrder.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
     {/* <Chip /> */}
-    <ChoosePlace />
+    {/* <ChoosePlace /> */}
+    <MenuOrder />
   </StrictMode>
 );

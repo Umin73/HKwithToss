@@ -1,174 +1,163 @@
-import styled from "styled-components";
+import "./movieStyle.css";
 
-const Header = styled.div`
-  display: block;
-  position: relative;
-  width: 100%;
-  min-width: 1100px;
-  height: 91px;
-  background: #fff;
-  border-bottom: 1px solid #351f67;
-`;
-
-const Logo = styled.div`
-  position: absolute;
-  left: 50%;
-  top: 23px;
-  width: 140px;
-  height: 90px;
-  margin: 0 0 0 -70px;
-  padding: 0;
-`;
-
-const LogoText = styled.a`
-  display: block;
-  width: 140px;
-  height: 47px;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  line-height: 0;
-  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png)
-    center center no-repeat;
-`;
-
-const UtilArea = styled.div`
-  position: relative;
-  display: block;
-  width: 1100px;
-  margin: 0 auto;
-  color: #666;
-
-  &::before,
-  &::after {
-    content: "";
-    display: table;
-  }
-`;
-
-const LeftLink = styled.div`
-  position: absolute;
-  top: 15px;
-  left: 0;
-  font-size: 0.8667em;
-`;
-
-const RightLink = styled.div`
-  position: absolute;
-  top: 15px;
-  right: 0;
-  font-size: 0.8667em;
-`;
-
-const LinkArea = styled.div`
-  display: block;
-  position: absolute;
-  top: 42px;
-  width: 36px;
-  height: 36px;
-  font-size: 0;
-  line-height: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-
-  &::before,
-  &::after {
-    content: "";
-    display: table;
-  }
-`;
-
-const LinkAreaA = styled.div`
-  display: block;
-  position: absolute;
-  top: 42px;
-  width: 36px;
-  height: 36px;
-  font-size: 0;
-  line-height: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-`;
-
-export default function HeaderComponent() {
-  const linkStyle = {
-    color: "#666",
-    marginRight: "10px",
-  };
-
-  const siteMapBtnStyle = {
-    left: "0",
-    backgroundImage:
-      "url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-sitemap.png)",
-  };
-
-  const searchBtnStyle = {
-    left: "40px",
-    backgroundImage:
-      "url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search.png)",
-  };
-
-  const timetableBtnStyle = {
-    right: "40px",
-    backgroundImage:
-      "url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-schedule.png)",
-  };
-
-  const myMegaboxBtnStyle = {
-    right: "0",
-    backgroundImage:
-      "url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-mymega.png)",
-  };
-
+function Header() {
   return (
-    <Header>
-      <Logo>
-        <LogoText href="#"></LogoText>
-      </Logo>
-      <UtilArea>
-        <LeftLink>
-          <a href="#" style={linkStyle}>
-            VIP LOUNGE
+    <div className="header">
+      <div className="top_links">
+        <div className="left_link">
+          <a href="#">VIP LOUNGE</a>
+          <a href="#">멤버십</a>
+          <a href="#">고객센터</a>
+        </div>
+        <div className="right_link">
+          <a href="#">로그인</a>
+          <a href="#">회원가입</a>
+          <a href="#">빠른예매</a>
+        </div>
+      </div>
+      <div className="navigation-container">
+        <nav id="link_area">
+          <a href="#layer_sitemap">
+            <img src="public/movieimg/ham.png" />
           </a>
-          <a href="#" style={linkStyle}>
-            멤버십
+          <a href="#layer_header_search">
+            <img src="public/movieimg/search.png" />
           </a>
-          <a href="#" style={linkStyle}>
-            고객센터
+          <a
+            href="https://www.megabox.co.kr/movie"
+            className="flex justify-center items-center"
+          >
+            <img src="public/movieimg/mega_logo.png" alt="logo" />
           </a>
-        </LeftLink>
-        <RightLink>
-          <a href="#" style={linkStyle}>
-            로그인
+          <a href="#">
+            <img src="public/movieimg/month.png" />
           </a>
-          <a href="#" style={linkStyle}>
-            회원가입
+          <a href="#">
+            <img src="public/movieimg/me.png" />
           </a>
-          <a href="#" style={linkStyle}>
-            빠른예매
-          </a>
-        </RightLink>
-        <LinkArea>
-          <LinkAreaA
-            href="#"
-            title="사이트맵"
-            style={siteMapBtnStyle}
-          ></LinkAreaA>
-          <LinkAreaA href="#" title="검색" style={searchBtnStyle}></LinkAreaA>
-          <LinkAreaA
-            href="#"
-            title="상영시간표"
-            style={timetableBtnStyle}
-          ></LinkAreaA>
-          <LinkAreaA
-            href="#"
-            title="나의 메가박스"
-            style={myMegaboxBtnStyle}
-          ></LinkAreaA>
-        </LinkArea>
-      </UtilArea>
-    </Header>
+        </nav>
+
+        <nav id="gnb">
+          <li>
+            <a href="#" className="gnb-txt-movie">
+              <img src="public/movieimg/gnb-txt-movie.png" />
+            </a>
+            <div className="gnb-depth2">
+              <ul>
+                <li>
+                  <a href="/movie" title="전체영화">
+                    전체영화
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="/booking" className="gnb-txt-reserve">
+              <img src="public/movieimg/gnb-txt-reserve.png" />
+            </a>
+            <div className="gnb-depth2">
+              <ul>
+                <li>
+                  <a href="/booking" title="빠른예매">
+                    빠른른예매
+                  </a>
+                </li>
+                <li>
+                  <a href="/booking/timetable" title="빠른예매">
+                    상영 시간표
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/booking/privatebooking"
+                    title="더 부티크 프라이빗 예매"
+                  >
+                    더 부티크 프라이빗 예매
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="/theater/list" className="gnb-txt-theater" title="극장">
+              <img src="public/movieimg/gnb-txt-theater.png" />
+            </a>
+            <div className="gnb-depth2">
+              <ul>
+                <li>
+                  <a href="/theater/list" title="전체극장">
+                    전체 극장
+                  </a>
+                </li>
+                <li>
+                  <a href="/theater/list" title="특별관">
+                    특별관
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="/event" className="gnb-txt-event" title="이벤트">
+              <img src="public/movieimg/gnb-txt-event.png" />
+            </a>
+            <div className="gnb-depth2">
+              <ul>
+                <li>
+                  <a href="/event" title="진행중 이벤트">
+                    진행중 이벤트
+                  </a>
+                </li>
+                <li>
+                  <a href="/event/end" title="지난 이벤트">
+                    지난 이벤트
+                  </a>
+                </li>
+                <li>
+                  <a href="/event/winner/list" title="당첨자 발표">
+                    당첨자 발표
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="/store" className="gnb-txt-store" title="스토어">
+              <img src="public/movieimg/gnb-txt-store.png" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/benefit/membership"
+              className="gnb-txt-benefit"
+              title="혜택"
+            >
+              <img src="public/movieimg/gnb-txt-benefit.png" />
+            </a>
+            <div className="gnb-depth2">
+              <ul>
+                <li>
+                  <a href="/benefit/membership" title="메가박스 멤버십">
+                    메가박스 멤버십
+                  </a>
+                </li>
+                <li>
+                  <a href="/benefit/discount/guide" title="제휴/할인">
+                    제휴/할인
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </nav>
+      </div>
+    </div>
   );
 }
+export default Header;
